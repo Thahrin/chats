@@ -1,0 +1,129 @@
+/* Chat.css */
+
+.chat-body {
+    background: linear-gradient(135deg, #ffffff, #ffffff); /* Gradient background */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    background-image: url(./chatbg.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .chat-container {
+    background-image: url(./bgrd.jpg);
+    background-size: 50%;
+    padding: 20px;
+    border-radius: 20px; /* Increase border-radius to round the corners */
+    width: 25%;
+    height: 70%;
+    margin-right: 4%;
+    box-shadow:
+        0px 4.4px 5.3px rgba(0, 0, 0, 0.63),
+        0px 14.7px 17.9px rgba(0, 0, 0, 0.118),
+        0px 66px 80px rgba(0, 0, 0, 0.016);
+    position: relative;
+    border: 10px solid #000; /* Black border */
+}
+
+/* Add a screen-like shape to the container */
+.chat-container::before {
+    background-color: #ffffff; /* Light gray background color */
+    padding: 20px;
+    border-radius: 20px; /* Increase border-radius to round the corners */
+    width: 25%;
+    height: 70%;
+    margin-right: 4%;
+    box-shadow:
+        0px 4.4px 5.3px rgba(0, 0, 0, 0.63),
+        0px 14.7px 17.9px rgba(0, 0, 0, 0.118),
+        0px 66px 80px rgba(0, 0, 0, 0.016);
+    position: relative;
+}
+
+.message-container {
+  width: 95%;
+  height: 80%;
+  overflow-y: auto;
+  padding: 10px;
+  margin-top: auto; /* Align to the bottom */
+  display: flex;
+  flex-direction: column-reverse; /* Stack messages from bottom to top */
+}
+
+.message-wrapper {
+  background-color: #FF735C; /* Change the background color to a blue shade */
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 8px;
+  display: block;
+  align-self: flex-start; /* Align messages to the left */
+  text-align: left; /* Align text to the left within the message wrapper */
+}
+
+/* Align even (2nd, 4th, etc.) messages to the right */
+.message-wrapper:nth-child(even) {
+  align-self: flex-end;
+  text-align: right;
+}
+
+.message-text {
+  color: #f0ecec; /* Change text color to white for better visibility */
+}
+  /* Chat.css */
+
+.input-container {
+  width: 100%;
+  margin-top: 18px;
+  border-radius: 25px;
+  gap: 10px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.message-input {
+  width: 100%; /* Set the width to 100% to take the remaining space */
+  padding-right: 10px; /* Adjust padding to make space for the button */
+  border-color:transparent #fff #FF735C;
+  margin-right: 5px;
+  position: relative;
+  border-radius: 25px;
+  color: #0f0f0f;
+}
+
+.send-button {
+  font-size: 20px;
+  background-color: rgb(109, 104, 100);
+  color: black;
+  width: 45px;
+  height: 45px;
+  opacity: 0.75;
+  border: 1px solid #000000;
+  border-radius: 25px;
+  cursor: pointer;
+  position: absolute; /* Position the button absolutely within the container */
+  bottom: 19px;
+  right: 5.65px; 
+}
+
+.send-button:hover {
+  animation: bounce_513 1s infinite;
+}
+
+@keyframes bounce_513 {
+  0%,
+  100% {
+    transform: translateX(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+
+  50% {
+    transform: translateX(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}

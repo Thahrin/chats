@@ -1,0 +1,152 @@
+.logbody {
+  background-image: url(./Img1.jpg);
+  background-repeat: no-repeat;
+  background-position: 30px;
+  background-size: 45%;
+  font-family: 'Arial', sans-serif;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.login-container {
+  
+  width: 300px; /* Bigger form width */
+  height: 390px; /* Bigger form width */
+  right: 10%;
+  padding-top: 10px;
+  padding: 70px; /* Bigger form height */
+  border: none;
+  border-radius: 10px; /* Larger border radius */
+  text-align: center;
+  box-shadow: 0 0 35px rgba(20, 46, 174, 0.683);
+  background: linear-gradient(to right, #082995ea, #6f8bded7); /* Blue gradient background */
+  margin-left: auto; /* Align to the right */
+  margin-right: 190px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+  
+  h2 {
+    color: #333;
+    font-family: 'Amatic SC', cursive;
+    font-size: 24px;
+  }
+  
+  .label-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 12px;
+    margin-right: 12px;
+    font-size: 18px; /* Larger font size */
+    color: #34495e; /* Darker text color */
+    text-align: left;
+    transition: color 0.3s ease-in-out; /* Smooth color transition on hover */
+  }
+  
+  label:hover {
+    color: #091624; /* Darker text color on hover */
+  }
+  
+  label::after {
+    content: '*'; /* Add an asterisk for required fields */
+    color: #FCAEAE; /* Red color for the asterisk */
+    margin-left: 4px;
+  }
+  
+  label.required::after {
+    content: '*';
+    color: #FCAEAE;
+    margin-left: 4px;
+  }
+  
+  /* Apply 'required' class to make a label indicate a required field */
+  
+  input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px; /* Adjust margin-bottom to create space between input fields */
+    border: 1px solid #3498db; /* Border color matches the button color */
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px; /* Smaller font size for better readability */
+    color: #070707; /* Text color */
+    transition: border-color 0.3s ease-in-out; /* Smooth border color transition on focus */
+}
+
+  input:focus {
+    outline: none;
+    border-color: #2980b9; 
+  }
+  
+  input::placeholder {
+    color: #13131353;
+    font-style: italic; 
+  }
+  
+  input.error {
+    border-color: #e74c3c; 
+  }
+  
+  input.success {
+    border-color: #2ecc71; 
+  }
+  
+  .button-container {
+    display: flex;
+    flex-direction: row; /* Align buttons vertically */
+    margin-bottom: 500%; /* Add margin between the input and buttons */
+}
+
+  
+  button.log{
+    height: 35px;
+    width: 40%;
+    margin-right: 15px;
+    background-color: #FCAEAE;
+    color: #fefefe;
+    border: 1px solid #3498db; 
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px; /* Smaller font size for better visibility */
+    transition: background-color 0.3s ease-in-out; /* Smooth background color transition on hover */
+  }
+  button.sign{
+    height: 35px;
+    width: 47%;
+    padding-top: 0%;
+    background-color: #FCAEAE;
+    color: #fefefe;
+    border: 1px solid #3498db; 
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px; /* Smaller font size for better visibility */
+    transition: background-color 0.3s ease-in-out; /* Smooth background color transition on hover */
+    font-family: 'Amatic SC', cursive;
+  }
+  
+  button.sign:hover {
+    background-color: #ff7464; /* Darker background color on hover for an interactive feel */
+    color: #000000; /* White text color on hover */
+  }
+  
+  button.log:hover {
+    background-color: #ff7464; /* Darker background color on hover for an interactive feel */
+    color: #000000; /* Darker text color on hover */
+  }
+  
+  
+  button.disabled {
+    background-color: #ff7464; 
+    border-color: #ff7464 ; /* Gray border color for disabled state */
+    cursor: not-allowed; /* Cursor changes to not-allowed for disabled state */
+  }
+  
